@@ -1,0 +1,4 @@
+#!/bin/bash
+sed -i '/DNSStubListener/d' /etc/systemd/resolved.conf
+echo "DNSStubListener=no" >> /etc/systemd/resolved.conf
+ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
